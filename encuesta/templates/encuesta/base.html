@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+</head>
+<body>
+
+<div>
+	{% block content %}
+	{% endblock content %}	
+</div>
+{% include 'encuesta/base/js.html' %}
+<script >
+	$(document).ready(function(){
+		{% block jquery%} {% endblock %}
+	})
+</script>
+</body>
+</html>

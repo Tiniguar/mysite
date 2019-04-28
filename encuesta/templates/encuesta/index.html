@@ -1,0 +1,14 @@
+{% if lastest_question_list %}
+    <ul>
+    {% for Pregunta in lastest_question_list %}
+        <li><a href="{% url 'encuesta:detail' Pregunta.id %}">{{ Pregunta.pregunta_Nombre }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+<br>
+
+<a href="{% url 'encuesta:grafico'  %}">ver graficos</a>
